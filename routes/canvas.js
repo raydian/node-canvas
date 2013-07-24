@@ -1,7 +1,7 @@
 
 
 module.exports = function (app) {
-    app.get('/', proc.index);
+    app.get('/', proc.pngtest);
     
     app.get('/pt',proc.pngtest);
 };
@@ -9,7 +9,7 @@ module.exports = function (app) {
 var proc = {};
 
 proc.index = function(req,res){
-	res.render('index',{title:'abcd',imgs:'abcdef'});
+	res.render('index',{title:'abcd',imgs:'http://file.ikeepu.com/source/30199772/jpg'});
 };
 
 
