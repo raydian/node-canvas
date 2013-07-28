@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= name %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= name %></h1>
+    <canvas id="canvas"></canvas>
+    <div class="slides"></div>
+  </body>
+  <!-- 
+
+   -->
+	<script type="text/javascript">
+			var ppt_array = [
+			<% for(var i=0;i < data.length;i++){ %>
+				"<%= data[i].url %>"<% if(i < data.length-1){ %>,<% } %>
+			<% } %>
+			];
+	</script>   
+  <script src="/javascripts/jquery-1.8.3.min.js"></script>
+  <script src="/javascripts/ppt_loader.js"></script>
+<!--   <script src="/javascripts/canvas_socket_client.js"></script> -->
+  
+  
+</html>
