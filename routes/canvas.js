@@ -8,12 +8,20 @@ module.exports = function (app) {
     app.get('/ppt',proc.ppt_loader);
     
     app.get('/pshow',proc.pshow);
+    
+    app.get('/chat',proc.chat);
 };
 
 var proc = {};
 
 proc.index = function(req,res){
 	res.render('index',{title:'abcd',imgs:'http://file.ikeepu.com/source/30199772/jpg'});
+};
+
+proc.chat = function(req,res){
+	var uid = req.query.uid;
+	var to_uid = req.query.to;
+	res.render('chat',{uid:uid,to_uid:to_uid});	
 };
 
 
