@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas Draw</title>
+    <link rel='stylesheet' href='../stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Canvas Draw</h1>
+<!--     <canvas class="canvss" id="canvas" width="1024px" height="600px"></canvas> -->
+	<div id="container"></div>
+  </body>
+  <script src="../javascripts/kinetic-v4.7.1.js"></script> 
+  <script src="../javascripts/jquery-1.8.3.min.js"></script> 
+  
+  <script type="text/javascript">
+  	window.onload = function(){
+  	//创建Kinetic舞台，绑定我们添加的<div>容器
+
+  		 
+
+  		var stage = new Kinetic.Stage({
+	  		container : 'container', //<div>的id
+	  		width : 600, //创建的舞台宽度
+	  		height : 400 //创建的舞台高度
+  		});
+
+  		//创建Kinetic用户层
+  		var layer = new Kinetic.Layer();
+
+  		//创建一个Kinetic矩形对象
+  		var rect = new Kinetic.Rect({
+  			x : 200, //矩形左上角x坐标
+  			y : 150, //矩形左上角y坐标
+	  		width : 200, //矩形的宽度
+	  		height : 100, //矩形的高度
+	  		fill : 'red', //矩形的填充色
+ 	 		stroke : 'black', //矩形边缘线的颜色
+	  		strokeWidth : 4 //矩形边缘线的宽度
+  		});
+
+
+  		//向用户层中添加上面的矩形
+  		layer.add(rect);
+
+  		//将上面的用户层添加到舞台上
+  		stage.add(layer);
+
+  		stage.draw();
+  	};
+  
+  </script>
+   
+  
+</html>
